@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './app.css';
 import MainContent from './MainContent';
 import EditOrCreateNote from './EditOrCreateNote';
 import BackButton from './BackButton';
