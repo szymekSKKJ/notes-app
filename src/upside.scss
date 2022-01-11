@@ -1,0 +1,63 @@
+#Upside {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0px 25px 0px 25px;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    #title {
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        font-size: 36px;
+    }
+
+    #serach-button {
+        width: 36px;
+        height: 36px;
+        background-color: rgba(255, 255, 255, 0.125);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        i {
+            font-size: 18px;
+        }
+    }
+
+    #search-input {
+        width: 100vw;
+        height: auto;
+        background-color: transparent;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: top 250ms, opacity 250ms;
+        padding: 0px 10px 0px 10px;
+
+        input {
+            width: 100%;
+            max-width: 1024px;
+            height: 33px;
+            background-color: rgba(255, 255, 255, 0.125);
+            border-radius: 100px;
+            border: unset;
+            border: solid 2px rgba(0, 0, 0, 0.5);
+            font-size: 20px;
+            padding-left: 20px;
+            color: #f2f2f2;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+}

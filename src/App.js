@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './app.css';
+import MainContent from './MainContent';
+import EditOrCreateNote from './EditOrCreateNote';
+import BackButton from './BackButton';
+import {PopupWindow} from './PopupWindow';
 
-function App() {
+const App = () => {
+  
+  const [isAnotherNoteOpen, setIsAnotherNoteOpen] = useState({isOpen: false, noteContentElement: undefined, noteTitleElement: undefined, isNew: false});
+  const [openComponent, setOpenComponent] = useState({componentToOpen: undefined, componentToClose: undefined});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="app">
+      <PopupWindow
+        isAnotherNoteOpen={isAnotherNoteOpen} 
+        setIsAnotherNoteOpen={setIsAnotherNoteOpen}
+        openComponent={openComponent}
+        setOpenComponent={setOpenComponent}
+      >
+      </PopupWindow>
+      <BackButton 
+        isAnotherNoteOpen={isAnotherNoteOpen} 
+        setIsAnotherNoteOpen={setIsAnotherNoteOpen}
+        openComponent={openComponent}
+        setOpenComponent={setOpenComponent}
+      ></BackButton>
+      <MainContent 
+        isAnotherNoteOpen={isAnotherNoteOpen} 
+        setIsAnotherNoteOpen={setIsAnotherNoteOpen}
+        openComponent={openComponent}
+        setOpenComponent={setOpenComponent}
+      ></MainContent>
+      <EditOrCreateNote 
+        isAnotherNoteOpen={isAnotherNoteOpen} 
+        setIsAnotherNoteOpen={setIsAnotherNoteOpen}
+        openComponent={openComponent}
+        setOpenComponent={setOpenComponent}
+      ></EditOrCreateNote>
     </div>
   );
 }

@@ -1,0 +1,224 @@
+#PopupWindow {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  display: none;
+  z-index: 10000000;
+  opacity: 0;
+}
+
+#PopupWindow #title {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  font-size: 26px;
+  margin-bottom: 25px;
+  margin-top: -200px;
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
+  text-align: center;
+}
+
+@-webkit-keyframes wrongPassword {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    color: red;
+  }
+  25% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+  50% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+  75% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    color: red;
+  }
+}
+
+@keyframes wrongPassword {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    color: red;
+  }
+  25% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+  50% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+  75% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    color: red;
+  }
+}
+
+#PopupWindow #inputs {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 100px;
+}
+
+#PopupWindow #inputs input {
+  width: 80%;
+  max-width: 1024px;
+  height: 33px;
+  background-color: rgba(0, 0, 0, 0.36);
+  outline: none;
+  border: unset;
+  font-size: 30px;
+  color: #f2f2f2;
+  border-radius: 100px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: solid 1px black;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+#PopupWindow #inputs input::-webkit-input-placeholder {
+  font-size: 14px;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.36);
+  -webkit-transform: translate(0px, -4px);
+          transform: translate(0px, -4px);
+}
+
+#PopupWindow #inputs input:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.36);
+  transform: translate(0px, -4px);
+}
+
+#PopupWindow #inputs input::-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.36);
+  transform: translate(0px, -4px);
+}
+
+#PopupWindow #inputs input::placeholder {
+  font-size: 14px;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.36);
+  -webkit-transform: translate(0px, -4px);
+          transform: translate(0px, -4px);
+}
+
+#PopupWindow #submit-button {
+  width: auto;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 20px 8px 20px;
+  border-radius: 100px;
+  font-size: 16px;
+  border: solid 1px black;
+  cursor: pointer;
+}
+
+#PopupWindow #buttons-wrapper {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#PopupWindow #buttons-wrapper .button {
+  width: 75px;
+  height: auto;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 20px 8px 20px;
+  border-radius: 100px;
+  font-size: 16px;
+  border: solid 1px black;
+  margin: 0px 25px 0px 25px;
+  cursor: pointer;
+}
+
+#PopupWindow #buttons-wrapper .button:nth-child(2) {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+#PopupWindow #buttons-wrapper .button:nth-child(1) {
+  background-color: rgba(0, 255, 21, 0.2);
+}
+/*# sourceMappingURL=PopupWindow.css.map */
