@@ -73,7 +73,7 @@ const Upside = (props) => {
             const NotesElement = document.querySelector('#Notes');
             const searchInputElement = document.querySelector('#Upside #search-input');
             NotesElement.style.transform = 'translateY(0px)';
-            searchInputElement.style.top = '0px';
+            searchInputElement.style.top = '-33px';
             searchInputElement.style.opacity = '0';
             searchInputElement.querySelector('input').value = '';
         });

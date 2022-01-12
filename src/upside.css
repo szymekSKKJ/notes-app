@@ -46,10 +46,10 @@
 
 #Upside #search-input {
   width: 100vw;
-  height: auto;
+  height: 33px;
   background-color: transparent;
   position: absolute;
-  top: 0px;
+  top: -33px;
   left: 0px;
   display: -webkit-box;
   display: -ms-flexbox;

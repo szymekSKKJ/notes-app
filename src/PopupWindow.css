@@ -1,7 +1,7 @@
 #PopupWindow {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.25);
   position: fixed;
   top: 0px;
   left: 0px;
@@ -27,16 +27,24 @@
   opacity: 0;
 }
 
+@media screen and (min-height: 500px) {
+  #PopupWindow {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 100px;
+  }
+}
+
 #PopupWindow #title {
   width: auto;
   height: auto;
   background-color: transparent;
   font-size: 26px;
-  margin-bottom: 25px;
-  margin-top: -200px;
   -webkit-transition: color 250ms;
   transition: color 250ms;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 @-webkit-keyframes wrongPassword {
@@ -108,7 +116,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 100px;
+  margin-bottom: 25px;
 }
 
 #PopupWindow #inputs input {
