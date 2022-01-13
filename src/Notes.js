@@ -39,6 +39,7 @@ const Notes = ({isAnotherNoteOpen, setIsAnotherNoteOpen, openComponent, setOpenC
                     password={note.password}
                     id={note.id}
                     key={'note' + index}
+                    content={note.content}
                 >
                     <div id="title">
                         <p>{note.title}</p>

@@ -3,7 +3,7 @@ import './note.css';
 import EditOrCreateNote from './EditOrCreateNote';
 import { setupPopupWindow, openPopupWindow, hidePopupWindow} from './PopupWindow.js';
 
-const Note = ({children, addNew, isLocked, isAnotherNoteOpen, setIsAnotherNoteOpen, openComponent, setOpenComponent, password, id}) => {
+const Note = ({children, addNew, isLocked, isAnotherNoteOpen, setIsAnotherNoteOpen, openComponent, setOpenComponent, password, id, content}) => {
     const NoteComponent = useRef(null);
     const isLockedTrue = isLocked === 'true';
     let noteContentElement; 
@@ -65,9 +65,18 @@ const Note = ({children, addNew, isLocked, isAnotherNoteOpen, setIsAnotherNoteOp
         setIsAnotherNoteOpen({isOpen: true, noteContentElement: undefined, noteTitleElement: undefined, isNew: true});
     }
 
+    const changeNoteContent = () => {
+        const noteContentElement = document.querySelector('#Note #content');
+        noteContentElement.innerHTML = content;
+    }
+
     useEffect(() => {
         changeNoteStylesToAddNewNote();
     }, []);
+
+    useEffect(() => {
+        changeNoteContent();
+    });
 
 
     return (
