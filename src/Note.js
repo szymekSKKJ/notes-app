@@ -66,13 +66,13 @@ const Note = ({children, addNew, isLocked, isAnotherNoteOpen, setIsAnotherNoteOp
     }
 
     const changeNoteContent = () => {
-        if (document.querySelector('#Note #content') && isLocked === 'false') {
-            const noteContentElement = document.querySelector('#Note #content');
+        if (NoteComponent.current && isLocked === 'false') {
+            const noteContentElement = NoteComponent.current.querySelector('#content');
             noteContentElement.innerHTML = content;
             noteContentElement.style.opacity = '1';
         } 
-        else if (document.querySelector('#Note #content') && isLocked === 'true') {
-            const noteContentElement = document.querySelector('#Note #content');
+        else if (NoteComponent.current && isLocked === 'true') {
+            const noteContentElement = NoteComponent.current.querySelector('#content');
             noteContentElement.style.opacity = '1';
         }
     }
