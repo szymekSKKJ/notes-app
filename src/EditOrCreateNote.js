@@ -255,8 +255,8 @@ const EditOrCreateNote = ({isAnotherNoteOpen, setIsAnotherNoteOpen, openComponen
             });
 
             const saveNote = () => {
-                const textareaElementValue = textareaElement.value;
-                const titleInputElementValue = titleInputElement.value;
+                const textareaElementValue = textareaElement.value.replace(/(?:\r\n|\r|\n)/g, '<br>');
+                const titleInputElementValue = titleInputElement.value.replace(/(?:\r\n|\r|\n)/g, '<br>');
                 createOrEditNote(titleInputElementValue, textareaElementValue);
                 saveButton.style.transform = 'translate(-50%, 0px)';
                 saveButton.style.animation = 'unset';

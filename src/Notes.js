@@ -44,7 +44,7 @@ const Notes = ({isAnotherNoteOpen, setIsAnotherNoteOpen, openComponent, setOpenC
                         <p>{note.title}</p>
                     </div>
                     <div id="content">
-                        <p>{note.content}</p>
+                        <p>{note.content.replaceAll('<br>', '\n')}</p>
                     </div>
                     <div id="date">
                         <p>{new Date(note.date).getDate()} {month[new Date(note.date).getMonth()]} </p>
