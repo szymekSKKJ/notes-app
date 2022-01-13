@@ -39,6 +39,8 @@
         overflow: auto;
         padding-left: 4px;
         line-height: 1.2;
+        opacity: 0;
+        transition: opacity 250ms;
     }
 
     .content-hidden {
