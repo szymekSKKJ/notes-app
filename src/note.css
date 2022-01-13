@@ -47,8 +47,8 @@
   padding-left: 4px;
   line-height: 1.2;
   opacity: 0;
-  -webkit-transition: opacity 250ms;
-  transition: opacity 250ms;
+  -webkit-transition: opacity 100ms;
+  transition: opacity 100ms;
 }
 
 #Note .content-hidden {

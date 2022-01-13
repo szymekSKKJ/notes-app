@@ -66,11 +66,15 @@ const Note = ({children, addNew, isLocked, isAnotherNoteOpen, setIsAnotherNoteOp
     }
 
     const changeNoteContent = () => {
-        if (document.querySelector('#Note #content')) {
+        if (document.querySelector('#Note #content') && isLocked === 'false') {
             const noteContentElement = document.querySelector('#Note #content');
             noteContentElement.innerHTML = content;
-            noteContentElement.style.opacity = '1'
+            noteContentElement.style.opacity = '1';
         } 
+        else if (document.querySelector('#Note #content') && isLocked === 'true') {
+            const noteContentElement = document.querySelector('#Note #content');
+            noteContentElement.style.opacity = '1';
+        }
     }
 
     useEffect(() => {
@@ -81,7 +85,7 @@ const Note = ({children, addNew, isLocked, isAnotherNoteOpen, setIsAnotherNoteOp
         setTimeout(() => {
             changeNoteContent();
         }, 100);
-    }, [content]);
+    });
 
 
     return (
