@@ -66,9 +66,11 @@ const Note = ({children, addNew, isLocked, isAnotherNoteOpen, setIsAnotherNoteOp
     }
 
     const changeNoteContent = () => {
-        const noteContentElement = document.querySelector('#Note #content');
-        noteContentElement.innerHTML = content;
-        noteContentElement.style.opacity = '1'
+        if (document.querySelector('#Note #content')) {
+            const noteContentElement = document.querySelector('#Note #content');
+            noteContentElement.innerHTML = content;
+            noteContentElement.style.opacity = '1'
+        } 
     }
 
     useEffect(() => {
