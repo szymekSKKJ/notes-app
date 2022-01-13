@@ -76,7 +76,7 @@ const Note = ({children, addNew, isLocked, isAnotherNoteOpen, setIsAnotherNoteOp
 
     useEffect(() => {
         changeNoteContent();
-    });
+    }, [content]);
 
 
     return (
